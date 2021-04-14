@@ -1,0 +1,24 @@
+{
+  "name": "aspirantzhang/thinkphp6-unit-test",
+  "description": "Tools for unit testing with PHP Unit and ThinkPHP 6",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "aspirantzhang",
+      "email": "admin@aspirantzhang.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "aspirantzhang\\thinkphp6UnitTest\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "topthink/framework": "^6.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  }
+}
