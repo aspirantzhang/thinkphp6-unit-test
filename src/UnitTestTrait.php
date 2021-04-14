@@ -13,6 +13,11 @@ trait UnitTestTrait
     protected $app;
     protected $response;
 
+    public function startApp()
+    {
+        (new App())->http->run();
+    }
+
     public function startRequest(string $method = "GET", array $data = [])
     {
         $method = strtoupper($method);
