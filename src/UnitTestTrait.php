@@ -24,6 +24,7 @@ trait UnitTestTrait
         switch ($method) {
             case 'GET':
                 $this->request = new Request();
+                $this->request->withGet($data);
                 $this->app = new App();
                 $this->response = $this->app->http->run($this->request);
                 break;
