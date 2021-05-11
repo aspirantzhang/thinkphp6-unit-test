@@ -52,7 +52,7 @@ More supported usage
 
 ```
 // get with no param
-$this->endRequest();
+$this->startRequest();
 // get with param
 $this->startRequest('GET', ['trash' => 'onlyTrashed']);
 // post with data
