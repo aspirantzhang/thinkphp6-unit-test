@@ -59,6 +59,8 @@ $this->startRequest('GET', ['trash' => 'onlyTrashed']);
 $this->startRequest('POST', ['type' => 'delete', 'ids' => [1]]);
 // put with data
 $this->startRequest('PUT', ['display_name' => 'Admin']);
+// set localization (mocked Lang::getLangSet method)
+$this->setLang('zh-cn');
 ```
 
 Finally, close the request.
