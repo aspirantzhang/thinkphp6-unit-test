@@ -4,9 +4,11 @@ A simple tool for unit testing with PHPUnit and ThinkPHP 6
 
 ## Requirements
 
-[Thinkphp v6.0+](https://github.com/top-think/framework)
+- [Thinkphp v6.0+](https://github.com/top-think/framework)
 
-[PHPUnit v9.x+](https://github.com/sebastianbergmann/phpunit)
+- [PHPUnit v9.x+](https://github.com/sebastianbergmann/phpunit)
+
+- [Mockery v1.x+](https://github.com/mockery/mockery)
 
 ## Install
 
