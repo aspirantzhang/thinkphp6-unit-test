@@ -1,6 +1,6 @@
 {
   "name": "aspirantzhang/thinkphp6-unit-test",
-  "description": "Tools for unit testing with PHP Unit and ThinkPHP 6",
+  "description": "A simple tool for unit testing with PHPUnit and ThinkPHP 6",
   "version": "1.1.0",
   "type": "library",
   "license": "MIT",
