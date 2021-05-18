@@ -13,6 +13,7 @@ trait UnitTestTrait
     protected $request;
     protected $app;
     protected $response;
+    protected $mock;
 
     public function startApp()
     {
@@ -47,15 +48,22 @@ trait UnitTestTrait
         $this->response = $this->app->http->run($this->request);
     }
 
-    public function setLang($lang)
+    public function mockLang($lang)
     {
-        $mock = m::mock('alias:think\facade\Lang');
-        $mock->shouldReceive('getLangSet')->andReturn($lang);
-        $mock->shouldReceive('load')->andReturnNull();
+        $this->mock = m::mock('overload:think\facade\Lang');
+        $this->mock->shouldReceive('getLangSet')->andReturn($lang);
+        $this->mock->shouldReceive('load')->andReturnNull();
+        $this->mock->shouldReceive('get')->andReturnNull();
     }
 
     public function endRequest()
     {
         $this->app->http->end($this->response);
+    }
+    
+    public function endMockLang()
+    {
+        m::close();
+        unset($this->mock);
     }
 }

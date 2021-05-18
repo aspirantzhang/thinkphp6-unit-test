@@ -61,8 +61,10 @@ $this->startRequest('GET', ['trash' => 'onlyTrashed']);
 $this->startRequest('POST', ['type' => 'delete', 'ids' => [1]]);
 // put with data
 $this->startRequest('PUT', ['display_name' => 'Admin']);
-// set localization (mocked Lang::getLangSet method)
-$this->setLang('zh-cn');
+// mock localization
+$this->mockLang('zh-cn');
+// close mock localization
+$this->endMockLang();
 ```
 
 Finally, close the request.
