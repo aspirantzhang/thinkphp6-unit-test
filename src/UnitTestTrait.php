@@ -35,9 +35,10 @@ trait UnitTestTrait
                 $this->request->withPost($data);
                 break;
             case 'PUT':
+            case 'PATCH':
                 $this->request->withHeader(['Content-Type' => 'application/json']);
-                $this->request->withServer(['REQUEST_METHOD' => 'PUT']);
-                $this->request->setMethod('PUT');
+                $this->request->withServer(['REQUEST_METHOD' => $method]);
+                $this->request->setMethod($method);
                 $this->request->withInput(json_encode($data));
                 break;
             default:
